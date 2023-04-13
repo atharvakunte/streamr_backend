@@ -11,5 +11,5 @@ router.param("songId", getSongById);
 
 //create song route
 router.post("/song/create/:userId",isSignedIn, isAuthenticated, isAdmin, createSong);
-
+router.get("/songs", isSignedIn, getAllSongs);
 module.exports = router

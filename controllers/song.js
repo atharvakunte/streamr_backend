@@ -36,7 +36,7 @@ exports.getSongById=(req, res, next, id)=>{
 exports.getAllSongs=(req, res)=>{
    Song.find({})
    .populate()
-   .sort([[sortBy,"asc"]])
+   .sort([["trackname","asc"]])
    .exec((err, songs)=>{
        if(err){
         return res.status(400).json({

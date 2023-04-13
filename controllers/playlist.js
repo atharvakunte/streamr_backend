@@ -33,9 +33,7 @@ exports.getPlaylistById = (req, res, next, id)=>{
 }
 
 //get playlist by user
-exports.getPlaylistByUser = (req, res)=>{
-    Playlist.findOne().exec((err, playlist))
-}
+
 
 // get all Playlists
 
